@@ -9,6 +9,8 @@
 
 body {
   font-family: "Poppins", sans-serif;
+  /* background color grey */
+  background-color: gainsboro;
 }
 
 html {
@@ -174,11 +176,42 @@ section {
   height: 400px;
   width: 400px;
   margin: auto 0;
+  animation: backInLeft 1s forwards;
 }
+
+@keyframes backInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%) scaleX(0.7);
+  }
+  80% {
+    transform: translateX(10%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+} 
+
 
 .section__text {
   align-self: center;
   text-align: center;
+  animation: backInRight 1s forwards;
+}
+
+@keyframes backInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(100%) scaleX(0.7);
+  }
+  80% {
+    transform: translateX(-10%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 .section__text p {
